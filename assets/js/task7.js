@@ -1,3 +1,4 @@
+/*
 //Object
 let user1 = {
     name:'user1',
@@ -49,10 +50,71 @@ let dog={
     countLegs: 4, 
     countHead: 1,
 };
+*/
+//-------------------------------------------------------
 
+let user ={
+    firstName: 'Vasya',
+    lastName: 'Ivanov',
+    workExpressience: 0,
+    isMale: true,
+};
 
+console.log(user);
+console.log(user.firstName+ ' ' +user.lastName);
 
+user.category= 'junior';
+console.log(user);
 
+//rabotaem s ciklom
+while(user.workExpressience<=8){
+    user.workExpressience++;
+}
+console.log(user);
 
+user.category= 'senior';
+console.log(user)
 
+// function
+let userJack ={
+    firstName: 'Jack',
+    lastName: 'Sparrow',
+    isMale: true,
+    sayHello: function(){
+        //console.log("Hello! My name is Jack!");
+        console.log(
+            'Hello! My name is ', 
+            this.firstName+ ' ' +this.lastName+'!!!');
+    },
+    outThisObject: function(){
+       console.log(this);
+    },
+};
+userJack.sayHello();
+
+//--------------------------------------------------
+
+function producer(name, info){
+    this.name = name
+    this.info = info
+}
+function toy(name, price, prod){
+    this.name  =name;
+    this.price= price;
+    this.prod = prod;
+}
+
+const prod1 = new producer('Funny Toy', 'London');
+const toy1 = new toyproducer('ball', 10, prod1);
+
+//--------------------------------------------------
+const newProd={
+    name:'new prod',
+    info:'us',
+};
+const newProd={
+    name:'new toy',
+    info:'best toy',
+    prod: newProd,
+};
 

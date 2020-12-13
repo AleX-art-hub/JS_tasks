@@ -154,5 +154,67 @@ switch(op){
         console.log(FDiv(number1, number2));
     } 
     break; 
-    default console.log('operator in undefined'); 
+    default:{
+        console.log('operator in undefined');
+    } 
+    break; 
 }
+
+
+
+//rercursiya
+function MyPow(x,y){
+    let i,
+    res=1;
+    for (i=1;i<=y;i++){
+        res*=x
+    }
+    return res
+}
+
+function MyPow2(x,y){
+    return MyPow2()
+}
+//rercursiya summa chisel ot x do y (DZ dodelat)
+function MySum10(x,y){
+  if (n == 1) {
+    return x;
+  } else {
+    return x + MySum10(x, n - 1);
+  }
+}
+
+
+//1 type: function dicloration
+
+function Fun1(a,b){
+    return a+b;
+}
+//2 type: function expression
+const SumFunExpression = function(a,b){
+    return a+b;
+};
+console.log('FunExpression', SumFunExpression(2,3))
+//3 type: array function (strelochie function)
+const sumArrayFun = (a,b) => {
+    return a+b
+};
+console.log(sumArrayFun(2,2));
+//3.1
+const sumArrayFun2 = (a,b) => a+b;
+console.log(sumArrayFun2(2,2));
+
+
+
+
+
+
+
+
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions
+//https://metanit.com/web/javascript/3.4.php
+//https://learn.javascript.ru/recursion
+//https://learn.javascript.ru/function-declaration-expression
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/function
+//https://learn.javascript.ru/function-expressions
+//
